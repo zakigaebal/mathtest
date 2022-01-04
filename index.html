@@ -5,6 +5,7 @@
     <title>javascript: calculate two numbers</title>
     <meta charset="windows-1252" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <form name="myform">
@@ -15,12 +16,20 @@
       <hr />
       <input type="text" name="fst" /><br /><br />
       <input type="text" name="snd" /><br /><br />
-
-      <input type="text" name="result" onclick="add()" /><br /><br />
+      <input id="r1" type="text" name="result" readonly /><br /><br />
+      <input type="text" name="result2" /><br /><br />
     </form>
 
-    <input type="text" id="result2" /><br /><br />
     <button onclick="confirm()">확인하기</button>
+    <input
+      type="button"
+      class="clear"
+      value="다시하기"
+      onclick="document.myform.fst.value='',
+      document.myform.snd.value='',
+      document.myform.result.value='',
+      document.myform.result2.value=''"
+    />
     <script>
       function add() {
         fst = parseInt(myform.fst.value);
@@ -50,11 +59,7 @@
         myform.result.value = result;
       }
 
-      //   function confirm() {
-      //     if (result1 === result2) {
-      //       display: none;
-      //     }
-      //   }
+      function confirm() {}
     </script>
   </body>
 </html>
