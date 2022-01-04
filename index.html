@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>javascript: calculate two numbers</title>
+    <meta charset="windows-1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <form name="myform">
+      <input type="button" name="" value="ADD" onclick="add()" />
+      <input type="button" name="" value="substract" onclick="substract()" />
+      <input type="button" name="" value="Multiply" onclick="Multiply()" />
+      <input type="button" name="" value="Divide" onclick="Divide()" />
+      <hr />
+      <input type="text" name="fst" /><br /><br />
+      <input type="text" name="snd" /><br /><br />
+
+      <input type="text" name="result" onclick="add()" /><br /><br />
+    </form>
+
+    <input type="text" id="result2" /><br /><br />
+    <button onclick="confirm()">확인하기</button>
+    <script>
+      function add() {
+        fst = parseInt(myform.fst.value);
+        snd = parseInt(myform.snd.value);
+        result = fst + snd;
+        myform.result.value = result;
+      }
+
+      function substract() {
+        fst = parseInt(myform.fst.value);
+        snd = parseInt(myform.snd.value);
+        result = fst - snd;
+        myform.result.value = result;
+      }
+
+      function Multiply() {
+        fst = parseInt(myform.fst.value);
+        snd = parseInt(myform.snd.value);
+        result = fst * snd;
+        myform.result.value = result;
+      }
+
+      function Divide() {
+        fst = parseInt(myform.fst.value);
+        snd = parseInt(myform.snd.value);
+        result = fst / snd;
+        myform.result.value = result;
+      }
+
+      //   function confirm() {
+      //     if (result1 === result2) {
+      //       display: none;
+      //     }
+      //   }
+    </script>
+  </body>
+</html>
